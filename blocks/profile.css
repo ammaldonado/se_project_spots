@@ -47,6 +47,7 @@
 }
 
 .profile__edit-btn {
+  margin-right: auto;
   margin-top: auto;
   border: none;
   background-color: #fcf5e5;
