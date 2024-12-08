@@ -51,6 +51,7 @@
 .profile__edit-btn {
   margin-right: auto;
   margin-top: auto;
+  padding: 0;
   border: none;
   background-color: #fcf5e5;
   opacity: 70%;
@@ -95,6 +96,7 @@
     align-items: center;
     text-align: center;
     padding-top: 20px;
+    margin-right: 0;
   }
 
   .profile__avatar {
