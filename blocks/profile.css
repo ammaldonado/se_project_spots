@@ -99,6 +99,10 @@
     margin-right: 0;
   }
 
+  .profile__edit-btn {
+    margin-right: 0;
+  }
+
   .profile__avatar {
     margin: 0 0 12px;
     height: 80px;
