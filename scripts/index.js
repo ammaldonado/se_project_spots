@@ -47,7 +47,7 @@ const cardModalCloseBtn = cardModal.querySelector(".modal__close-btn");
 const cardNameInput = cardModal.querySelector("#add-card-name-input");
 const cardLinkInput = cardModal.querySelector("#add-card-link-input");
 const previewModalCloseBtn = document.querySelector(
-  ".modal__close_type_preview"
+  ".modal__close-btn_type_preview"
 );
 //select the modal
 const previewModal = document.querySelector("#preview-modal");
@@ -64,6 +64,7 @@ function handleAddCardSubmit(evt) {
   const cardEl = getCardElement(inputValues);
   cardsList.prepend(cardEl);
   closeModal(cardModal);
+  evt.target.reset();
 }
 
 function getCardElement(data) {
@@ -75,7 +76,6 @@ function getCardElement(data) {
   const cardLinkEl = cardElement.querySelector(".card__image");
   const cardLikedBtn = cardElement.querySelector(".card__like-button");
   const cardDeleteBtn = cardElement.querySelector(".card__delete-btn");
-  const cardImageEl = cardElement.querySelector(".card__image");
 
   cardNameEl.textContent = data.name;
   cardLinkEl.alt = data.name;
@@ -85,10 +85,10 @@ function getCardElement(data) {
     cardLikedBtn.classList.toggle("card__like-button_liked");
   });
 
-  cardImageEl.addEventListener("click", () => {
+  cardLinkEl.addEventListener("click", () => {
     openModal(previewModal);
     previewModalImageEl.src = data.link;
-    previewModalCaptionEl.alt = data.name;
+    previewModalImageEl.alt = data.name;
     previewModalCaptionEl.textContent = data.name;
   });
 
