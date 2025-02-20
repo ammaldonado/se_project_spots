@@ -72,12 +72,12 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  background-color: black;
+  background-color: #212121;
   color: #fff;
   margin: 0;
   width: fit-content;
   border-radius: 8px;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .modal__title {
@@ -161,7 +161,6 @@
 
   .modal__image {
     margin-top: 89px;
-    margin-bottom: 16px;
     border-radius: 4px;
   }
 
