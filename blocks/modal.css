@@ -138,6 +138,7 @@
 
   .modal__container {
     padding: 12px;
+    box-sizing: content-box;
   }
 
   .modal__title {
