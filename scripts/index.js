@@ -73,9 +73,8 @@ function handleAddCardSubmit(evt) {
 }
 
 function getCardElement(data) {
-  const cardElement = document
-    .querySelector("#card-template")
-    .content.querySelector(".card")
+  const cardElement = cardTemplate.content
+    .querySelector(".card")
     .cloneNode(true);
   const cardNameEl = cardElement.querySelector(".card__title");
   const cardLinkEl = cardElement.querySelector(".card__image");
@@ -125,7 +124,8 @@ profileEditButton.addEventListener("click", () => {
   resetValidation(
     editFormElement,
     [editModalNameInput, editModalDiscriptionInput],
-    editButtonElement
+    editButtonElement,
+    settings
   );
   editModalNameInput.value = profileName.textContent;
   editModalDiscriptionInput.value = profileDiscription.textContent;
@@ -165,10 +165,7 @@ function keyHandler(evt) {
 
 modals.forEach((modal) => {
   modal.addEventListener("mousedown", (evt) => {
-    if (
-      evt.target.classList.contains("modal") ||
-      evt.target.classList.contains("modal__close")
-    ) {
+    if (evt.target.classList.contains("modal")) {
       closeModal(modal);
     }
   });
