@@ -5,12 +5,44 @@
   margin: 0 auto;
 }
 
+.profile__avatar-container {
+  position: relative;
+  width: 190px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.profile__avatar-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  visibility: hidden;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+}
+
+.profile__avatar-container:hover .profile__avatar-btn {
+  visibility: visible;
+}
+
 .profile__avatar {
   height: 190px;
   width: 190px;
   margin-right: 20px;
   border-radius: 8px;
   object-fit: cover;
+}
+
+.profile__avatar-btn::after {
+  content: "Edit Avatar";
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  size: 16px;
+  color: #fff;
 }
 
 .profile__column {
@@ -26,7 +58,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
   color: #212121;
@@ -38,7 +70,7 @@
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
   font-family: Poppins, Arial, Helvetica, sans-serif;
@@ -96,6 +128,34 @@
     align-items: center;
     text-align: center;
     padding-top: 20px;
+    height: 274px;
+  }
+
+  .profile__avatar-container {
+    margin-right: 0px;
+  }
+
+  .profile__avatar-btn {
+    visibility: visible;
+    width: 23px;
+    height: 23px;
+    top: 52px;
+    left: 107px;
+    border-radius: 6px;
+    gap: 8px;
+    color: #212121;
+    opacity: 60%;
+    border: 0;
+  }
+
+  .profile__pencil-icon {
+    position: absolute;
+  }
+
+  /* todo-set content of  :: after element to "" */
+  .profile__avatar-btn::after {
+    content: "Edit Avatar";
+    visibility: hidden;
   }
 
   .profile__edit-btn {
