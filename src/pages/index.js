@@ -214,7 +214,7 @@ function handleAvatarSubmit(evt) {
 
       closeModal(avatarModal);
       evt.target.reset();
-      //disableButton(avatarSubmitBtn);
+      disableButton(avatarSubmitBtn, settings);
     })
     .catch(console.error)
     .finally(() => {

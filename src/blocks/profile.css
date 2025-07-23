@@ -20,6 +20,10 @@
   align-items: flex-end;
   justify-content: center;
   visibility: hidden;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
 }
 
 .profile__avatar-container:hover .profile__avatar-btn {
